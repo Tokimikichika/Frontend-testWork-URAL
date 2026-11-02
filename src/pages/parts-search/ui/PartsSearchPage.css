@@ -1,0 +1,11 @@
+.content-wrap {
+  max-width: 1040px;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 576px) {
+  .content-wrap {
+    padding-top: 1rem;
+  }
+}

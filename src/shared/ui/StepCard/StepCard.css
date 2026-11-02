@@ -1,0 +1,55 @@
+.step-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 1px solid #e1e6f0;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 36px rgba(23, 32, 51, 0.07);
+}
+
+.step-card.is-disabled {
+  box-shadow: none;
+}
+
+.step-badge {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #2666ff;
+  font-weight: 750;
+}
+
+.is-disabled .step-badge {
+  background: #aab3c4;
+}
+
+.step-content {
+  min-width: 0;
+}
+
+.step-content h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.35rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 576px) {
+  .step-card {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    border-radius: 0.75rem;
+  }
+
+  .step-badge {
+    width: 1.85rem;
+    height: 1.85rem;
+    font-size: 0.85rem;
+  }
+}

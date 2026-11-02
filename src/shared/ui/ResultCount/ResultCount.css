@@ -1,0 +1,12 @@
+.result-count {
+  display: inline-grid;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+  place-items: center;
+  border-radius: 1rem;
+  color: #174fcf;
+  background: #eaf0ff;
+  font-size: 0.85rem;
+  font-weight: 750;
+}

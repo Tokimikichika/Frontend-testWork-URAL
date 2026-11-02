@@ -1,0 +1,7 @@
+.loader {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+  color: #52617c;
+}

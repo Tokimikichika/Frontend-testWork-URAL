@@ -1,0 +1,47 @@
+.brands-block {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e9edf4;
+}
+
+.brand-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 0.65rem;
+}
+
+.brand-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #dce3ef;
+  border-radius: 0.65rem;
+  color: #24334f;
+  background: #fff;
+  font-weight: 650;
+  text-align: left;
+  transition: 150ms ease;
+}
+
+.brand-button:hover,
+.brand-button:focus-visible {
+  border-color: #7ca2ff;
+  color: #174fcf;
+  background: #f5f8ff;
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.brand-button.active {
+  border-color: #2666ff;
+  color: #fff;
+  background: #2666ff;
+}
+
+@media (max-width: 576px) {
+  .brand-list {
+    grid-template-columns: 1fr;
+  }
+}

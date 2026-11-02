@@ -1,0 +1,54 @@
+.results-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.results-heading h3 {
+  margin: 0.15rem 0 0;
+  font-size: 1.25rem;
+}
+
+.offers-table {
+  min-width: 760px;
+  border: 1px solid #e6eaf1;
+}
+
+.offers-table th {
+  padding: 0.8rem 1rem;
+  border-bottom-width: 1px;
+  color: #65728a;
+  background: #f7f9fc;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.offers-table td {
+  padding: 0.9rem 1rem;
+  border-color: #edf0f5;
+}
+
+.brand-name {
+  margin-top: 0.2rem;
+  color: #64718a;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.stock {
+  color: #157347;
+  font-weight: 700;
+}
+
+.no-stock {
+  color: #8a93a4;
+}
+
+.price {
+  color: #172033;
+  font-weight: 750;
+  white-space: nowrap;
+}

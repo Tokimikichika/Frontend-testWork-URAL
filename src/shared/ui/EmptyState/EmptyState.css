@@ -1,0 +1,8 @@
+.empty-state {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border: 1px dashed #ccd5e3;
+  border-radius: 0.75rem;
+  color: #52617c;
+  background: #f8fafc;
+}
