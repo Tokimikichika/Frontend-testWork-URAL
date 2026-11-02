@@ -3,9 +3,9 @@ import { defineConfig, loadEnv } from 'vite'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
-  const apiKey = env.FAVORIT_API_KEY || ''
 
   return {
+    base: env.VITE_BASE_PATH || '/',
     plugins: [react()],
     test: {
       environment: 'jsdom',
@@ -25,22 +25,6 @@ export default defineConfig(({ mode }) => {
           branches: 30,
           functions: 40,
           lines: 50,
-        },
-      },
-    },
-    server: {
-      proxy: {
-        '/api/parts': {
-          target: 'http://api.favorit-parts.ru',
-          changeOrigin: true,
-          rewrite: (path) => {
-            const apiPath = path.replace(
-              /^\/api\/parts/,
-              '/hs/hsprice/',
-            )
-            const separator = apiPath.includes('?') ? '&' : '?'
-            return `${apiPath}${separator}key=${encodeURIComponent(apiKey)}`
-          },
         },
       },
     },

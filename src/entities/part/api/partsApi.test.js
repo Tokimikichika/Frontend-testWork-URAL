@@ -23,7 +23,7 @@ describe('partsApi', () => {
 
     await expect(fetchManufacturers('01089')).resolves.toEqual(goods)
     expect(fetch).toHaveBeenCalledWith(
-      '/api/parts?number=01089',
+      'https://api.favorit-parts.ru/hs/hsprice/?key=00000000-0000-0000-0000-000000000001&number=01089',
       { signal: expect.any(AbortSignal) },
     )
   })
@@ -34,7 +34,7 @@ describe('partsApi', () => {
     await fetchOffers('01089', 'FEBI')
 
     expect(fetch).toHaveBeenCalledWith(
-      '/api/parts?number=01089&brand=FEBI&analogues=on&info=on',
+      'https://api.favorit-parts.ru/hs/hsprice/?key=00000000-0000-0000-0000-000000000001&number=01089&brand=FEBI&analogues=on&info=on',
       { signal: expect.any(AbortSignal) },
     )
   })

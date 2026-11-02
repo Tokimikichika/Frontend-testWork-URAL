@@ -2,6 +2,7 @@ import {
   API_REQUEST_TIMEOUT_MS,
   API_RETRY_BASE_DELAY_MS,
   API_RETRY_COUNT,
+  PARTS_API_KEY,
   PARTS_API_URL,
   RETRIABLE_HTTP_STATUSES,
 } from '../../../shared/config/api'
@@ -163,7 +164,10 @@ async function requestOnce(url, externalSignal) {
 }
 
 async function requestParts(params, signal) {
-  const query = new URLSearchParams(params)
+  const query = new URLSearchParams({
+    key: PARTS_API_KEY,
+    ...params,
+  })
   const url = `${PARTS_API_URL}?${query}`
 
   for (let attempt = 0; attempt <= API_RETRY_COUNT; attempt += 1) {
